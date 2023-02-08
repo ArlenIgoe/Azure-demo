@@ -1,0 +1,37 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "Request",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "Response"
+    },
+    {
+      "name": "CosmosIn",
+      "databaseName": "1",
+      "collectionName": "visitorCount",
+      "connectionStringSetting": "arlen_COUNTERDB",
+      "sqlQuery": "SELECT * FROM c",
+      "direction": "in",
+      "type": "cosmosDB"
+    },
+    {
+      "name": "cosmosOut",
+      "direction": "out",
+      "type": "cosmosDB",
+      "databaseName": "1",
+      "collectionName": "visitorCount",
+      "connectionStringSetting": "arlen_COUNTERDB"
+    }
+  ]
+  
+}
